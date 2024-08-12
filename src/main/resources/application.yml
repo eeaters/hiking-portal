@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: hiking-portal
+
+  datasource:
+    url: jdbc:mysql://sh-cdb-31gys5gq.sql.tencentcdb.com:20333/hiking?useSSL=false&serverTimezone=UTC
+    username: hiking
+    password: 1qaz2wsx
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true
+
+server:
+  port: 8090
