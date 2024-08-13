@@ -56,7 +56,7 @@ public class ActivityServiceImpl implements ActivityService {
                 .toList();
         Map<String, String> weatherCacheMap = new HashMap<>();
         for (ActivityResp activityResp : respList) {
-            weatherFullAdapter.handle(activityResp, _ -> handlerWeather(activityResp, weatherCacheMap));
+            weatherFullAdapter.handle(activityResp, act -> handlerWeather(activityResp, weatherCacheMap));
         }
         return respList;
     }
@@ -64,7 +64,7 @@ public class ActivityServiceImpl implements ActivityService {
     private void handlerWeather(ActivityResp activityResp, Map<String, String> weatherMap) {
         String destDistrict = activityResp.getActivityStartTime() + activityResp.getDestDistrict();
 
-        String weatherInfo = weatherMap.computeIfAbsent(destDistrict, _ -> {
+        String weatherInfo = weatherMap.computeIfAbsent(destDistrict, weather -> {
             WeatherForecast cityAndDate = weatherForecastRepository.findByCityAndDate(activityResp.getDestDistrict(), activityResp.getActivityStartTime());
             if(cityAndDate == null) {
                 return null;
