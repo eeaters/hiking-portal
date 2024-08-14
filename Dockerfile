@@ -1,5 +1,4 @@
-FROM openjdk:23-ea-22-windowsservercore-ltsc2022
-
+FROM alpine/java:22-jdk
 
 WORKDIR /app
 
