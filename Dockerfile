@@ -1,4 +1,5 @@
-FROM amazoncorretto:22
+FROM openjdk:23-ea-22-windowsservercore-ltsc2022
+
 
 WORKDIR /app
 
