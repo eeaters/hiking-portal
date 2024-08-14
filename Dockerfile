@@ -1,4 +1,4 @@
-FROM amazoncorretto:22-alpine-jdk
+FROM openjdk:23-ea-17-jdk-bullseye
 
 WORKDIR /app
 
