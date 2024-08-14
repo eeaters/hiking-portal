@@ -1,4 +1,4 @@
-FROM oraclelinux:9-slim
+FROM openjdk:22-jdk-slim-buster
 
 # 设置工作目录
 WORKDIR /app
