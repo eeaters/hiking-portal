@@ -1,4 +1,4 @@
-FROM eclipse-temurin:22-jdk
+FROM amazoncorretto:22-alpine-jdk
 
 WORKDIR /app
 
