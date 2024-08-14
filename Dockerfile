@@ -1,4 +1,4 @@
-FROM openjdk:22-jdk-slim-buster
+FROM amazoncorretto:22
 
 WORKDIR /app
 
